@@ -11,7 +11,7 @@ html {
 .page {
   margin: auto;
   color: #fff;
-  font-family: 'Fira Sans Condensed', sans-serif;
+  font-family: "Fira Sans Condensed", sans-serif;
   font-size: 18px;
   background-color: #1b1919;
   inline-size: 1200px;
@@ -64,8 +64,9 @@ ol {
 
 .content__list {
   position: relative;
+  width: 416px;
   height: 298px;
-  overflow: hidden auto;
+  overflow: auto;
 }
 
 .result__video-container {
@@ -89,7 +90,7 @@ ol {
 /*позиционирование внутри карточки*/
 .content__video-card {
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-start;
   align-items: center;
 }
 
@@ -99,14 +100,14 @@ ol {
 }
 
 .content__video-card-description-container {
+  flex: 1 1 0%;
   min-width: 200px;
-  height: 107px;
-  white-space: nowrap;
+  min-height: 107px;
 }
 
 .content__video-card-title {
   overflow: hidden;
-  font-family: 'Oswald', sans-serif;
+  font-family: "Oswald", sans-serif;
   font-size: 30px;
   line-height: 30px;
   text-transform: uppercase;
@@ -114,22 +115,16 @@ ol {
 }
 
 .content__video-card-description {
-  overflow: hidden;
-  font-family: 'Fira Sans Condensed', sans-serif;
+  margin-top: 6px;
+  font-family: "Fira Sans Condensed", sans-serif;
   font-weight: 400;
   font-size: 18px;
   line-height: 16.2px;
   text-align: left;
-  text-overflow: ellipsis;
-}
-
-.preloader {
-  position: absolute;
-  inset: 0;
 }
 
 .title {
-  font-family: 'Oswald', sans-serif;
+  font-family: "Oswald", sans-serif;
   font-weight: 700;
   font-size: 75px;
   line-height: 70.5px;
@@ -157,11 +152,6 @@ ol {
   text-decoration: none;
 }
 
-/*устанавливает разрыв между тайтлом видео и подписью*/
-.content__video-card-title ~ .content__video-card-description {
-  margin-top: 6px;
-}
-
 .visually-hidden {
   position: absolute;
   overflow: hidden;
@@ -178,7 +168,7 @@ ol {
 
 .search-form__fieldset-title {
   margin-bottom: 5px;
-  font-family: 'Fira Sans Condensed', sans-serif;
+  font-family: "Fira Sans Condensed", sans-serif;
   font-weight: 400;
   font-size: 18px;
   line-height: 21.6px;
@@ -191,6 +181,9 @@ ol {
 }
 
 .search-form__label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
   cursor: pointer;
 }
 
@@ -202,7 +195,7 @@ ol {
   border-bottom: 1px solid #fff;
   outline: none;
   color: inherit;
-  font-family: 'Fira Sans Condensed', sans-serif;
+  font-family: "Fira Sans Condensed", sans-serif;
   font-weight: 400;
   font-size: 18px;
   line-height: 21.6px;
@@ -242,7 +235,7 @@ ol {
 }
 
 /*маркер чекбокса*/
-input[type="checkbox"]:checked + .search-form__pseudo-checkbox::before {
+.search-form__checkbox:checked + .search-form__pseudo-checkbox::before {
   content: "";
   position: absolute;
   top: 1px;
@@ -273,7 +266,7 @@ input[type="checkbox"]:checked + .search-form__pseudo-checkbox::before {
   border: 1px solid #fff;
   padding: 6px;
   color: inherit;
-  font-family: 'Fira Sans Condensed', sans-serif;
+  font-family: "Fira Sans Condensed", sans-serif;
   font-weight: 700;
   font-size: 18px;
   line-height: 21.6px;
@@ -287,7 +280,7 @@ input[type="checkbox"]:checked + .search-form__pseudo-checkbox::before {
 }
 
 .more-button {
-  width: 399px;
+  width: 397px;
   margin: 1px;
 }
 
@@ -321,7 +314,7 @@ input[type="checkbox"]:checked + .search-form__pseudo-checkbox::before {
 
 .content__card-link:hover {
   text-decoration: underline;
-  text-underline-offset: 4px;
+  text-underline-offset: 2px;
 }
 
 .content__card-link:focus {
