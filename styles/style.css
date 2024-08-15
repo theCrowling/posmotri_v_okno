@@ -312,7 +312,9 @@ ol {
   background-color: #545050;
 }
 
-.content__card-link:hover {
+/*добавил active*/
+.content__card-link:hover,
+.content__card-link:active {
   text-decoration: underline;
   text-underline-offset: 2px;
 }
